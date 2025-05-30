@@ -1,0 +1,183 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif; /* TIPO DE LETRA,   */
+    margin: 0;
+    padding: 0;
+    background-color: #f3f8f8;
+    font-size: 1rem;
+    width:100% ;
+    overflow-x: hidden;
+    box-sizing:border-box;
+    
+    }
+
+header {
+    background-color: #cf1616;
+    color: rgb(7, 14, 16);
+    padding: 1rem;
+    text-align: center;
+    font-family: fantasy;
+    width: 100% ;
+    
+    
+    }
+
+
+  
+footer {
+    background-color: #eaedee;
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    }
+
+nav {
+  background-color:white;
+  font-family: fantasy;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  color: black
+  
+}
+nav a {
+  color: black;
+  font-size: 2rem;
+}
+.Articulos {
+  min-height: 350px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+.item {
+  background-color:white;
+  border: 2px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 300px;
+  min-width:250px;
+  flex: 0 1 23%;      
+}
+
+.item img {
+  width: 100%;             /* Adaptarse al ancho del contenedor */
+  max-width: 180px;        
+  height: 180px;           
+  object-fit: contain;     /* Asegura que no se deforme */
+  display: block;
+  margin: 0 auto;          /* Centra la imagen */
+}
+
+.PANTALONES-CONTENEDOR,
+.REMERAS-CONTENEDOR,
+.BUZOS-CONTENEDOR{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 90%;
+  overflow: hidden;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.PrendasTodas {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  padding: 10px;
+  margin: 10px;
+  overflow:auto ;
+  scroll-behavior: smooth;
+  gap: 10px;
+  border-radius: black;
+}
+.prenda img {
+  height: 400px;
+  width: 300px;
+  flex-shrink: 0;
+}
+.prenda {
+  border:2px solid black;
+  text-align: center;
+}
+.precio,.talles {
+  display: block;
+  margin: 5px;
+  text-align: center;
+  
+}
+button.prev,
+button.next {
+  background-color: rgba(0,0,0,0.5); /* Fondo negro semitransparente */
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+button.prev {
+  position: absolute;
+  left: 0;
+}
+button.next {
+  position: absolute;
+  right: 0;
+}
+button.btn-carrito {
+  background-color: red;
+  color: black;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#mapa {
+  padding-bottom: 200px;  
+}
+
+@media (max-width: 1200px) {
+  .item {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
